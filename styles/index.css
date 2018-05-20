@@ -1,0 +1,84 @@
+:root {
+  --pad: 10px;
+  --scheme-background: #ffc86d;
+  --scheme-color:      #d64161;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  margin: 0px;
+  padding: 0px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: "Eksell Display Medium";
+  src: url('fonts/EksellDisplay-Small.woff') format('woff');
+  font-style: normal;
+}
+
+.Main {
+  height: 100%;
+  width: 100%;
+  font-family: "Eksell Display Medium";
+  font-weight: 100;
+  font-size: 1rem;
+  border: 10px solid var(--scheme-color);
+  background-color: var(--scheme-background);
+  color: var(--scheme-color);
+
+  /* CSS Grid: */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.Main.Main--scheme1 {
+  --scheme-background: #ffc86d;
+  --scheme-color:      #d64161;
+}
+
+.Main.Main--scheme2 {
+  --scheme-background: #183f63;
+  --scheme-color:      #ff6b68;
+}
+
+.Main-greeting {
+  font-size: 2.25rem;
+  text-align: right;
+  margin: calc(var(--pad)*2);
+  padding: var(--pad);
+
+  /* CSS Grid: */
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.ListGroup {
+  /* CSS Grid: */
+  justify-self: center;
+  align-self: center;
+}
+
+.List-link {
+  display: inline-block;
+  padding: var(--pad);
+  font-size: 1.25rem;
+  letter-spacing: 0.05rem;
+}
+
+.List-link:visited {
+  color: var(--scheme-color);
+}
+
+.ListGroup-heading {
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+}
