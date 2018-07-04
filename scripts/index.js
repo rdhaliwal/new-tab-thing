@@ -39,3 +39,31 @@
 })();
 
 
+(() => {
+  const readConfig = () => {
+    return new Promise((resolve, reject) => {
+      chrome.runtime.getPackageDirectoryEntry((root) => {
+        const errorHandler = (e) => {
+          console.log(e);
+          reject(e);
+        }; 
+
+        root.getFile("scripts/config.json", {}, (fileEntry) => {
+          fileEntry.file((file) => {
+            var reader = new FileReader();
+            reader.onloadend = function(e) {
+              resolve(JSON.parse(this.result)); 
+            };
+            reader.readAsText(file);
+          }, errorHandler);
+        }, errorHandler);
+      }); 
+    })  
+  }
+
+  document.addEventListener('DOMContentLoaded', async () => {
+    window.config = await readConfig();
+  }, false);
+})();
+
+
