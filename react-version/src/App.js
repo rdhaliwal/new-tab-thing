@@ -1,28 +1,43 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+const Group = ({ heading, items }) => {
+  return(
+    <div className="ListGroup">
+      <h3 className="ListGroup-heading">
+        {heading}
+      </h3>
+      <ul className="List">
+        {
+          items.map(i => {
+            return (
+              <li key={`list-${i.name}`}>
+                <a className="List-link" href={i.website}>
+                  {i.name}
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </div>
+  );
+};
+
+const App = ({ groups, compliment }) => {
+  const NUMBER_OF_COLOR_SCHEMES = 1;
+  let chosenScheme =  Math.floor(Math.random() * NUMBER_OF_COLOR_SCHEMES) + 1;
+  let clas = `Main Main--scheme${chosenScheme}`;
+
+  return (
+    <div className={clas}>
+      { groups.map(g => <Group key={`group-${g.heading}`} {...g} />) }
+
+      <h1 className="Main-greeting">
+        {compliment}
+      </h1>
+    </div>
+  );
+};
 
 export default App;

@@ -1,32 +1,64 @@
-.App {
-  text-align: center;
+:root {
+  --pad: 10px;
+  --scheme-background: #ffc86d;
+  --scheme-color:      #d64161;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.Main {
+  height: 100%;
+  width: 100%;
+  font-family: "Eksell Display Medium";
+  font-weight: 100;
+  font-size: 1rem;
+  border: 10px solid var(--scheme-color);
+  background-color: var(--scheme-background);
+  color: var(--scheme-color);
+
+  /* CSS Grid: */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Main.Main--scheme1 {
+  --scheme-background: #ffc86d;
+  --scheme-color:      #d64161;
 }
 
-.App-link {
-  color: #61dafb;
+.Main.Main--scheme2 {
+  --scheme-background: #183f63;
+  --scheme-color:      #ff6b68;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Main-greeting {
+  font-size: 2.25rem;
+  text-align: right;
+  margin: calc(var(--pad)*2);
+  padding: var(--pad);
+
+  /* CSS Grid: */
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.ListGroup {
+  /* CSS Grid: */
+  justify-self: center;
+  align-self: center;
+}
+
+.List-link {
+  display: inline-block;
+  padding: var(--pad);
+  font-size: 1.25rem;
+  letter-spacing: 0.05rem;
+}
+
+.List-link:visited {
+  color: var(--scheme-color);
+}
+
+.ListGroup-heading {
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
 }
