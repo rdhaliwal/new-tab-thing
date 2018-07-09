@@ -4,6 +4,8 @@
 
  - clone this repo
    - for examples sake, let's say it's cloned in `~/workspace/new-tab-thing`
+ - run `yarn install`
+ - run `yarn build`
  - go to `chrome://extensions/` (it only works in chrome)
  - enable developer mode in the top right 
  - select `load unpacked`
