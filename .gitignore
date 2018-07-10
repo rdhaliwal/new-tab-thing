@@ -1,13 +1,13 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/react-version/node_modules
+/node_modules
 
 # testing
-/react-version/coverage
+/coverage
 
 # production
-/react-version/build
+/build
 
 # misc
 .DS_Store
@@ -16,6 +16,6 @@
 .env.test.local
 .env.production.local
 
-/react-version/npm-debug.log*
-/react-version/yarn-debug.log*
-/react-version/yarn-error.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
