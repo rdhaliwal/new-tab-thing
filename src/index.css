@@ -1,0 +1,20 @@
+html,
+body,
+.BodyWrapper {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  margin: 0px;
+  padding: 0px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: "Eksell Display Medium";
+  src: url(./assets/fonts/EksellDisplay-Small.woff) format('woff');
+  font-style: normal;
+}

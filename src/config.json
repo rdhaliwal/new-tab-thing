@@ -1,0 +1,64 @@
+{
+  "groups": [
+    {
+      "heading": "Personal",
+      "items": [
+        {
+          "website": "https://inbox.google.com/",
+          "name": "Email"
+        },
+        {
+          "website": "https://calendar.google.com/",
+          "name": "Calendar"
+        },
+        {
+          "website": "https://www.trello.com/",
+          "name": "Trello"
+        }
+      ]
+    },
+    {
+      "heading": "Finances",
+      "items": [
+        {
+          "website": "https://www.commsec.com.au/products/international-share-trading.html",
+          "name": "Commsec"
+        },
+        {
+          "website": "https://stake.com.au/dashboard/portfolio",
+          "name": "Stake"
+        },
+        {
+          "website": "https://app.clover.com.au/sign-in",
+          "name": "Clover"
+        }
+      ]
+    },
+    {
+      "heading": "News",
+      "items": [
+        {
+          "website": "https://www.theverge.com/",
+          "name": "Verge"
+        },
+        {
+          "website": "https://www.giantbomb.com/",
+          "name": "Giant Bomb"
+        },
+        {
+          "website": "https://www.eurogamer.net/",
+          "name": "Eurogamer"
+        }
+      ]
+    },
+    {
+      "heading": "Social",
+      "items": [
+        {
+          "website": "https://sol-corporation.slack.com/",
+          "name": "Sol Corporation"
+        }
+      ]
+    }
+  ]
+}
