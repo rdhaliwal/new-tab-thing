@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import BuildkiteDashboard from './components/Buildkite';
 
 const Group = ({ heading, items }) => {
   return(
@@ -36,6 +37,7 @@ const App = ({ groups, compliment }) => {
       <h1 className="Main-greeting">
         {compliment}
       </h1>
+      <BuildkiteDashboard />
     </div>
   );
 };

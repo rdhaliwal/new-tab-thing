@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import * as config from './config.json';
 
+require('dotenv').config();
+
 const generateCompliment = () => {
   const NAME = "Randeep";
 
